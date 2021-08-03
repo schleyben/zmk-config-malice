@@ -23,6 +23,7 @@
 	&kp CLCK &kp LGUI &kp LALT  &mo 1 &kp SPACE       &kp BSPC &mo  1  &kp RALT  &kp RCTRL &kp LEFT &kp DOWN &kp RIGHT
 			>;
 		};
+		
 
 		fn_layer {
 			bindings = <
