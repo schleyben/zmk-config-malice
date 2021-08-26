@@ -33,7 +33,7 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Malice)
+      - name: West Build (MaliceOrtho)
         run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=maliceOrtho -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: MaliceOrtho DTS File
         if: ${{ always() }}
