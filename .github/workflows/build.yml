@@ -34,16 +34,16 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Malice)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=malice -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Malice DTS File
+        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=maliceOrtho -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: MaliceOrtho DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
-      - name: Malice Kconfig file
+      - name: MaliceOrtho Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 malice_nice_nano_v2.uf2
-      - name: Archive (Malice)
+      - name: Archive (MaliceOrtho)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: malice_nice_nano_v2.uf2
+          path: maliceOrtho_nice_nano_v2.uf2

@@ -1,0 +1,6 @@
+if SHIELD_MALICEORTHO
+
+config ZMK_KEYBOARD_NAME
+	default "maliceOrtho"
+
+endif
