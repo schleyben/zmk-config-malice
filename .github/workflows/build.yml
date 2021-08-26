@@ -41,7 +41,7 @@ jobs:
       - name: MaliceOrtho Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 malice_nice_nano_v2.uf2
+        run: cp build/zephyr/zmk.uf2 maliceOrtho_nice_nano_v2.uf2
       - name: Archive (MaliceOrtho)
         uses: actions/upload-artifact@v2
         with:
